@@ -1,0 +1,313 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GP Edit Menu Prototype</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-VhBcF/php0Z/P5ZxlxaEx1GwqTQVIBu4G4giRWxTKOCjTxsPFETUDdVL5B6vYvOt" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="edit-mode">
+    <div class="confirm-delete">
+    </div>
+    <div class="header">
+      <h1>Edit Drinks</h1>
+      <a class="button done edit-mode" href="#">
+        <i class="fas fa-times"></i>
+        Close
+      </a>
+    </div>
+    <div class="content">
+      <div class="col-left">
+        <a class="button" href="#" id="enter-reorder-mode">
+          <i class="fas fa-bars"></i><br />
+          Reorder Items in Menu
+        </a>
+        <div class="reorder-contents">
+          <div class="reorder-arrow reorder-up" direction="up">
+            <i class="far fa-arrow-up"></i>
+          </div>
+          <p>Click on a drink name to select it, then use the arrows to change its place in the menu.</p>
+          <div class="reorder-arrow reorder-down" direction="down">
+            <i class="far fa-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="drink-item" drinkName="Cola" drinkColor="#C3272B" drinkType="regular" position="0">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample" style="background-color: #C3272B;">
+              </div>
+              <h3 class="name">Cola</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="drink-item" drinkName="Diet Cola" drinkColor="#C3272B" drinkType="diet" position="1">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample diet" style="background-color: #C3272B;">
+              </div>
+              <h3 class="name">Diet Cola</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="drink-item" drinkName="Orange Soda" drinkColor="#F9690E" drinkType="regular" position="2">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample" style="background-color: #F9690E;">
+              </div>
+              <h3 class="name">Orange Soda</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="drink-item" drinkName="Lemon/Lime" drinkColor="#27AE60" drinkType="regular" position="3">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample" style="background-color: #27AE60;">
+              </div>
+              <h3 class="name">Lemon/Lime</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="drink-item" drinkName="Diet Lem/Lime" drinkColor="#27AE60" drinkType="diet" position="4">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample diet" style="background-color: #27AE60;">
+              </div>
+              <h3 class="name">Diet Lem/Lime</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="drink-item" drinkName="Orange Juice" drinkColor="#FFA631" drinkType="regular" position="5">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample" style="background-color: #FFA631;">
+              </div>
+              <h3 class="name">Orange Juice</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="drink-item" drinkName="RB" drinkColor="#763568" drinkType="regular" position="6">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample" style="background-color: #763568;">
+              </div>
+              <h3 class="name">RB</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="drink-item" drinkName="Diet RB" drinkColor="#763568" drinkType="diet" position="7">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample diet" style="background-color: #763568;">
+              </div>
+              <h3 class="name">Diet RB</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="drink-item" drinkName="Hot Coffee" drinkColor="#754B12" drinkType="regular" position="8">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample" style="background-color: #754B12;">
+              </div>
+              <h3 class="name">Hot Coffee</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="drink-item" drinkName="Dr. P" drinkColor="#9D2933" drinkType="regular" position="9">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample" style="background-color: #9D2933;">
+              </div>
+              <h3 class="name">Dr. P</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="drink-item" drinkName="Diet Dr. P" drinkColor="#9D2933" drinkType="diet" position="10">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample diet" style="background-color: #9D2933;">
+              </div>
+              <h3 class="name">Diet Dr. P</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="drink-item" drinkName="Iced Tea" drinkColor="#1F4788" drinkType="regular" position="11">
+          <div class="view-mode">
+            <div class="main-content">
+              <div class="color-sample" style="background-color: #1F4788;">
+              </div>
+              <h3 class="name">Iced Tea</h3>
+            </div>
+            <div class="editables">
+              <span class="edit">
+                <i class="fas fa-edit"></i>
+              </span>
+              <span class="remove">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="add-drink-item">
+          <div class="plus-icon">
+            <i class="fas fa-plus"></i>
+          </div>
+          <h3>Add a Drink</h3>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+<div id="edit-mode" class="edit-content" style="display: none;">
+  <div class="name-field">
+    <label for="name">Name</label>
+    <input type="text" value="" class="text-field" id="name">
+  </div>
+  <div class="type-field">
+    <div class="type-regular">
+      <input type="radio" value="regular" class="hidden-radio" name="type-regular" id="type-regular" checked>
+      <div class="custom-radio" refValue="regular">
+        <i class="far fa-check"></i>
+      </div>
+      <label for="type-regular">Regular</label>
+    </div>
+    <div class="type-diet">
+      <input type="radio" value="diet" class="hidden-radio" name="type-diet" id="type-diet">
+      <div class="custom-radio" refValue="diet">
+        <i class="far fa-check"></i>
+      </div>
+      <label for="type-diet">Diet</label>
+    </div>
+  </div>
+  <div class="color-field">
+    <input type="hidden" value="#4E5B67" id="color">
+    <div class="color-sample" style="background-color: #4E5B67;"></div>
+    <h4>Select a Color</h4>
+  </div>
+  <div class="button-set">
+    <a class="button save">Save</a>
+    <a class="button cancel">Cancel</a>
+  </div>
+</div>
+
+<div class="drink-item new-item"  drinkName="" drinkColor="" drinkType="" position="" style="display: none;">
+  <div class="view-mode">
+    <div class="main-content">
+      <div class="color-sample">
+      </div>
+      <h3 class="name"></h3>
+    </div>
+    <div class="editables">
+      <span class="edit">
+        <i class="fas fa-edit"></i>
+      </span>
+      <span class="remove">
+        <i class="fas fa-times"></i>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="overlay">
+  <div class="confirm-delete">
+    <p>Are you sure you want to delete <span class="drink-name-to-delete"></span> from the drink selection?</p>
+    <div class="btn-container">
+      <a class="button cancel">Cancel</a>
+      <a class="button destructive">Yes, Delete</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,443 @@
+* {
+  font-family: "Gotham", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #3C92DE;
+  max-height: 100vh;
+}
+
+.header {
+  position: relative;
+  width: 100vw;
+  color: white;
+  padding: 20px 8px 0 8px;
+  height: 80px;
+  background-color: #3C92DE;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.header h1 {
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow-y: hidden;
+}
+.content .col-left {
+  width: 250px;
+  margin: 24px 0 24px 24px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.content .col-left .button > i {
+  padding-bottom: 12px;
+}
+.content .col-right {
+  flex-grow: 1;
+  margin-top: 0;
+  padding: 16px 24px;
+  overflow-y: scroll;
+}
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+p {
+  color: white;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.drink-item, .add-edit-drink, .add-new-drink, .add-drink-item {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rbga(0, 0, 0, 0.24);
+  margin-bottom: 12px;
+}
+.drink-item .view-mode, .add-edit-drink .view-mode, .add-new-drink .view-mode, .add-drink-item .view-mode {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.drink-item .main-content, .add-edit-drink .main-content, .add-new-drink .main-content, .add-drink-item .main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+}
+.drink-item .main-content .color-sample, .add-edit-drink .main-content .color-sample, .add-new-drink .main-content .color-sample, .add-drink-item .main-content .color-sample {
+  height: 100%;
+  width: 60px;
+  background-color: orange;
+  border-radius: 3px;
+}
+.drink-item .main-content h3, .add-edit-drink .main-content h3, .add-new-drink .main-content h3, .add-drink-item .main-content h3 {
+  margin-left: 16px;
+  position: relative;
+  top: 2px;
+}
+.drink-item .editables, .add-edit-drink .editables, .add-new-drink .editables, .add-drink-item .editables {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+}
+.drink-item .editables .edit i, .add-edit-drink .editables .edit i, .add-new-drink .editables .edit i, .add-drink-item .editables .edit i {
+  font-size: 24px;
+  color: #0060A9;
+  padding: 12px;
+  margin-right: 8px;
+}
+.drink-item .editables .remove i, .add-edit-drink .editables .remove i, .add-new-drink .editables .remove i, .add-drink-item .editables .remove i {
+  font-size: 28px;
+  color: #C3272B;
+  padding: 12px;
+  margin-right: 8px;
+}
+
+.add-drink-item {
+  align-items: center;
+  margin-bottom: 24px;
+}
+.add-drink-item .plus-icon {
+  background-color: #0060A9;
+  height: 48px;
+  width: 48px;
+  border-radius: 48px;
+  margin: 0 6px;
+}
+.add-drink-item .plus-icon i {
+  font-size: 28px;
+  color: white;
+  width: 100%;
+  padding: 10px 0 6px 0;
+  text-align: center;
+}
+.add-drink-item h3 {
+  margin-left: 16px;
+  position: relative;
+  top: 2px;
+}
+
+.add-edit-drink, .add-new-drink {
+  height: auto;
+  flex-direction: column;
+  padding: 12px 20px;
+}
+.add-edit-drink .name-field, .add-new-drink .name-field {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0 16px 0;
+}
+.add-edit-drink .name-field input, .add-new-drink .name-field input {
+  appearance: none;
+  border: none;
+  height: 40px;
+  border-radius: 3px;
+  background-color: rgba(185, 212, 225, 0.5);
+  font-size: 20px;
+  padding: 0 12px;
+  margin-top: 4px;
+}
+.add-edit-drink .type-field, .add-new-drink .type-field {
+  margin: 8px 0;
+  display: flex;
+  flex-direction: row;
+}
+.add-edit-drink .type-field .type-regular, .add-new-drink .type-field .type-regular {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+.add-edit-drink .type-field .type-diet, .add-new-drink .type-field .type-diet {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+.add-edit-drink .type-field input[type=radio], .add-new-drink .type-field input[type=radio] {
+  display: none;
+}
+.add-edit-drink .type-field .custom-radio, .add-new-drink .type-field .custom-radio {
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  background-color: rgba(185, 212, 225, 0.5);
+  flex-grow: 0;
+}
+.add-edit-drink .type-field .custom-radio i, .add-new-drink .type-field .custom-radio i {
+  opacity: 0;
+  color: #0060A9;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 5px;
+}
+.add-edit-drink .type-field input[type=radio][checked] ~ .custom-radio, .add-new-drink .type-field input[type=radio][checked] ~ .custom-radio {
+  border: 3px solid #0060A9;
+}
+.add-edit-drink .type-field input[type=radio][checked] ~ .custom-radio i, .add-new-drink .type-field input[type=radio][checked] ~ .custom-radio i {
+  opacity: 1;
+}
+.add-edit-drink .type-field label, .add-new-drink .type-field label {
+  margin: 8px 16px;
+}
+.add-edit-drink .color-field, .add-new-drink .color-field {
+  margin: 0 0 16px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.add-edit-drink .color-field .color-sample, .add-new-drink .color-field .color-sample {
+  height: 100%;
+  width: 64px;
+  height: 48px;
+  background-color: orange;
+  border-radius: 3px;
+}
+.add-edit-drink .color-field h4, .add-new-drink .color-field h4 {
+  margin-left: 16px;
+  position: relative;
+  top: 2px;
+  font-size: 22px;
+}
+.add-edit-drink .button-set, .add-new-drink .button-set {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.add-edit-drink .button-set .button, .add-new-drink .button-set .button {
+  margin: 0 12px;
+}
+
+.button {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 16px 24px 14px 24px;
+  border: 4px solid white;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease-in-out;
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  text-align: center;
+}
+.button i {
+  padding-right: 8px;
+}
+.button:hover, .button:focus, .button:active {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.button {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 16px 24px 14px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 0;
+  text-align: center;
+}
+.button.save {
+  color: white;
+  background-color: #64B590;
+  border: 3px solid #64B590;
+  width: 200px;
+  transition: all 0.2s ease-out;
+}
+.button.save:hover, .button.save:focus, .button.save:active {
+  background-color: #4B9674;
+  border: 3px solid #4B9674;
+}
+.button.cancel {
+  color: #708898;
+  border: 3px solid #708898;
+  width: 200px;
+  transition: all 0.2s ease-out;
+}
+.button.cancel:hover, .button.cancel:focus, .button.cancel:active {
+  color: white;
+  background-color: #536D7E;
+  border: 3px solid #536D7E;
+}
+.button.destructive {
+  background-color: #C3272B;
+  color: white;
+  border: 3px solid #C3272B;
+  width: 200px;
+  transition: all 0.2s ease-out;
+}
+.button.destructive:hover, .button.destructive:focus, .button.destructive:active {
+  background-color: #9C1518;
+  border: 3px solid #9C1518;
+}
+
+.diet {
+  background-image: url("./assets/pttrn-white.png");
+  background-repeat: repeat;
+  background-size: 85% 85%;
+}
+
+body.edit-mode .header {
+  border-bottom: 3px solid #327BBB;
+}
+body.edit-mode .header .button.done {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 26px 36px 22px 36px;
+  border-radius: 0;
+  margin: 0;
+  height: 100%;
+  border: none;
+  background-color: #327BBB;
+}
+body.edit-mode .header .button.done:hover, body.edit-mode .header .button.done:focus, body.edit-mode .header .button.done:active {
+  background-color: #23659E;
+}
+body.edit-mode #enter-reorder-mode {
+  display: block;
+}
+body.edit-mode .reorder-contents {
+  display: none;
+}
+
+body.reorder-mode .header {
+  border-bottom: none;
+}
+body.reorder-mode .header .button.done {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+body.reorder-mode #enter-reorder-mode {
+  display: none;
+}
+body.reorder-mode .reorder-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+body.reorder-mode .reorder-contents .reorder-arrow {
+  height: 80px;
+  width: 80px;
+  border-radius: 100px;
+  border: 4px solid white;
+  color: white;
+  margin: 12px;
+}
+body.reorder-mode .reorder-contents .reorder-arrow:not(.active) {
+  opacity: 0.5;
+}
+body.reorder-mode .reorder-contents .reorder-arrow i {
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  padding-top: 12px;
+}
+body.reorder-mode .drink-item, body.reorder-mode .add-drink-item, body.reorder-mode .add-edit-drink, body.reorder-mode .add-new-drink {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+body.reorder-mode .drink-item .editables, body.reorder-mode .add-drink-item .editables, body.reorder-mode .add-edit-drink .editables, body.reorder-mode .add-new-drink .editables {
+  display: none;
+}
+body.reorder-mode .drink-item.reorder-selected, body.reorder-mode .reorder-selected.add-drink-item, body.reorder-mode .reorder-selected.add-edit-drink, body.reorder-mode .reorder-selected.add-new-drink {
+  background-color: white;
+  border: 5px solid #FFA631;
+  height: 80px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.24);
+}
+body.reorder-mode .add-drink-item {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.overlay .confirm-delete {
+  width: 640px;
+  background-color: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.24);
+}
+.overlay .confirm-delete .btn-container {
+  display: flex;
+  flex-direction: row;
+  margin: 16px 0;
+  justify-content: center;
+}
+.overlay .confirm-delete .btn-container .button {
+  margin: 0 16px;
+}
+.overlay .confirm-delete p {
+  color: black;
+  text-align: black;
+  margin-bottom: 24px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=style.css.map */
